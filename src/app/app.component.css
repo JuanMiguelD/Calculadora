@@ -1,0 +1,40 @@
+body{
+    height: 100%;
+    text-align: center;
+    background-color: #afbccb;
+}
+section{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-weight: 500;
+}
+.row{
+    padding-bottom: 20px; 
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.col-lg{
+    margin-right: 5px;
+    
+}
+#answ{
+    margin-bottom: 40px;
+}
+
+
+button{
+    margin-right: 5px;
+    margin-bottom: 3px;
+    width: 100px;
+    background-color: #78aaf2;
+    border-color: #97b6db;
+    
+}
+
+#borrar{
+    background-color: #ff726a;
+}
+
+
+
