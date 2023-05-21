@@ -27,3 +27,4 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('.content span')?.textContent).toContain('Calculadora app is running!');
   });
 });
+

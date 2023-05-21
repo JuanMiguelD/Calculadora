@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'Calculadora';
+  operacion(event:MouseEvent){  
+    const texto = event.target as HTMLButtonElement;
+    alert(texto!.textContent)
+    
+    
+
+    
+  }
+  operar: any;
+  reinicio: any
 }
+
+
