@@ -14,37 +14,41 @@ export class AppComponent {
   
   operacion(event:MouseEvent){  
     const texto = event.target as HTMLButtonElement;
-    let operacion= ""
-
-    if (texto!.textContent == "()"){
-      if (this.x%2==0){
+    
+    if(texto!.textContent == "="){
+      try{
+        document.getElementById("answ")!.innerHTML=eval(this.lista.join(""))
+      } catch(error){
+        document.getElementById("answ")!.innerHTML= "Invalid operation"
+      }
+        
+    }
+    else{
+      if (texto!.textContent == "()"){
+        if (this.x%2==0){
         this.lista.push("(")
       }
       else{
         this.lista.push(")")
       }
-      this.x = this.x+1
+      this.x = this.x+1 }
 
-    }
     else{
       if(texto!.textContent == "DEL"){
         this.lista.pop()
       }else{
+        if(texto!.textContent == "AC"){
+          this.lista.splice(0)
+        }else{
+          this.lista.push(texto!.textContent!)
+        }
 
-        this.lista.push(texto!.textContent!)
       }
     }
-
-    
-    for(let i = 0; i < (this.lista.length);i++){
-      operacion = operacion + this.lista[i]  
-    }
-    
-    document.getElementById("answ")!.innerHTML=operacion
-    
+    document.getElementById("answ")!.innerHTML=this.lista.join("") 
   }
-  operar:any
-  reinicio: any
+
+  }
 }
 
 
