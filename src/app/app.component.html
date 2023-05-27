@@ -4,61 +4,84 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
   <title>Calculadora</title>
 
 </head>
 <body>
-  <div >
-  <section class="container-fluid ">
   
-    <div class="row justify-content-center">      
-      <div id="answ" class="col-11">respuesta</div>
+  
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-8">
+          <div class="container-fluid btn-group">
+          <button id="answ" class="btn btn-primary"  >respuesta</button>
+          </div>
+          <div class="container-fluid btn-group">
+            <button class="btn btn-primary" (click)="operacion($event)" id="borrar" type="button">AC</button>
+            <button class="btn btn-primary" (click)="operacion($event)" type="button">()</button>
+            <button class="btn btn-primary" (click)="operacion($event)" type="button">^</button>
+            <button class="btn btn-primary" (click)="operacion($event)" id="division" type="button">/</button>
+          </div>
+          <div class="container-fluid btn-group">
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">sin</button>
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">cos</button>
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">tan</button>
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">√</button>
+          </div>
+          <div class="container-fluid btn-group">
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">π</button>
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">e</button>
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">ln</button>
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">^</button>
+          </div>
+
+          <div class="container-fluid btn-group">
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">7</button>
+            <button class="btn btn btn-primary"  (click)="operacion($event)" type="button">8</button>
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">9</button>
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">×</button>
+          </div>
+      
+          <div class="container-fluid btn-group">
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">4</button>
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">5</button>
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">6</button>
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">-</button>
+          </div>
+      
+          <div class="container-fluid btn-group">
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">1</button>
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">2</button>
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">3</button>
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">+</button>
+          </div>
+      
+          <div class="container-fluid btn-group">
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">0</button>
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">.</button>
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">DEL</button>
+            <button class="btn btn btn-primary" (click)="operacion($event)" type="button">=</button>
+          </div>
+        </div>
+        <div id="hst" class="col-4">
+          
+        </div>
+      </div>
     </div>
     
-    <div class="container-sm btn-group  ">
-      <button class="btn btn-sm btn-primary" (click)="operacion($event)" id="borrar" type="button">AC</button>
-      <button class="btn btn-sm btn-primary" (click)="operacion($event)" type="button">()</button>
-      <button class="btn btn-sm btn-primary" (click)="operacion($event)" type="button">%</button>
-      <button class="btn btn-sm btn-primary" (click)="operacion($event)" id="division" type="button">/</button>
-    </div>
-
-    <div class="container-sm btn-group ">
-      <button class="btn btn-sm btn-primary" (click)="operacion($event)" type="button">7</button>
-      <button class="btn btn-sm btn-primary"  (click)="operacion($event)" type="button">8</button>
-      <button class="btn btn-sm btn-primary" (click)="operacion($event)" type="button">9</button>
-      <button class="btn btn-sm btn-primary" (click)="operacion($event)" type="button">*</button>
-    </div>
-
-    <div class="container-sm btn-group ">
-      <button class="btn btn-sm btn-primary" (click)="operacion($event)" type="button">4</button>
-      <button class="btn btn-sm btn-primary" (click)="operacion($event)" type="button">5</button>
-      <button class="btn btn-sm btn-primary" (click)="operacion($event)" type="button">6</button>
-      <button class="btn btn-sm btn-primary" (click)="operacion($event)" type="button">-</button>
-    </div>
-
-    <div class="container-sm btn-group ">
-      <button class="btn btn-sm btn-primary" (click)="operacion($event)" type="button">1</button>
-      <button class="btn btn-sm btn-primary" (click)="operacion($event)" type="button">2</button>
-      <button class="btn btn-sm btn-primary" (click)="operacion($event)" type="button">3</button>
-      <button class="btn btn-sm btn-primary" (click)="operacion($event)" type="button">+</button>
-    </div>
-
-    <div class="container-sm btn-group ">
-      <button class="btn btn-sm btn-primary" (click)="operacion($event)" type="button">0</button>
-      <button class="btn btn-sm btn-primary" (click)="operacion($event)" type="button">.</button>
-      <button class="btn btn-sm btn-primary" (click)="operacion($event)" type="button">DEL</button>
-      <button class="btn btn-sm btn-primary" (click)="operacion($event)" type="button">=</button>
-    </div>
-
     
     
 
-    
-
-    
+   
     
   </section>
-</div>
+
 
 
 

@@ -1,30 +1,33 @@
 body{
     height: 100%;
-    text-align: center;
     background-color: #afbccb;
+    
 }
 section{
-    padding-right: 50px;
-    padding-left: 50px;
     padding-top: 100px;
     padding-bottom: 100px;
     font-weight: 500;
     font-size: 30px;
+    margin-left: 30px;
+    
+}
+.container{
+    margin-left: 20px;
 }
 
 
-
 #answ{
-    margin-bottom: 0px;
+    margin-bottom: 20px;
+    max-width: 1240px;
     text-align: right;
     background-color:#4e4e4e ;
-    max-width: 1110px;
     min-height: 90px;
     padding-bottom: 20px;
     padding-top: 20px;
     padding-right: 30px;
     color: white;
     border-radius: 5px;
+
 }
 
 
@@ -46,6 +49,17 @@ button{
     background-color:#ff8b81 ;
 
 }
+
+#hst{
+    background-color: #f0ebd7;
+    padding: 10px;
+    border-radius: 10px;
+    color: #4e4e4e;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
 
 
 
