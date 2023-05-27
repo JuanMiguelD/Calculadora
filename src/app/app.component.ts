@@ -91,6 +91,11 @@ export class AppComponent {
   }
 
   }
+  reseth(){
+   var dish = document.getElementById("hst")
+   dish!.innerHTML= ""
+   this.historial.splice(0)
+  }
 }
 
 
