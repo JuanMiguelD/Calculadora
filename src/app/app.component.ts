@@ -22,9 +22,9 @@ export class AppComponent {
     
     if(texto!.textContent == "="){
       try{
-        document.getElementById("answ")!.innerHTML= math.evaluate(this.listaOper.join(""))
+        document.getElementById("answ")!.innerHTML= math.round(math.evaluate(this.listaOper.join("")),5)
         
-        this.historial.push((this.listaUser.join("") + "  =  " + math.evaluate(this.listaOper.join(""))))
+        this.historial.push((this.listaUser.join("") + "  =  " + math.round(math.evaluate(this.listaOper.join("")),5)))
         
         
         for (var i = 0; i < this.historial.length; i++) {
@@ -37,6 +37,8 @@ export class AppComponent {
 
       } catch(error){
         document.getElementById("answ")!.innerHTML= "Invalid operation"
+        this.listaUser.splice(0)
+        this.listaOper.splice(0)
       }
       
       
